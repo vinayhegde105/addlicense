@@ -101,17 +101,13 @@ func executeTemplate(t *template.Template, d licenseData, top, mid, bot string) 
 	return out.Bytes(), nil
 }
 
-const tmplApache = `Copyright{{ if .Year }} {{.Year}}{{ end }} {{.Holder}}
+const tmplApache = `Copyright{{ if .Year }} {{.Year}}{{ end }} Open Text`
 
-    http://opentext.com
-
-`
-
-const tmplBSD = `Copyright (c){{ if .Year }} {{.Year}}{{ end }} {{.Holder}} All rights reserved.
+const tmplBSD = `Copyright (c){{ if .Year }} {{.Year}}{{ end }} Open Text All rights reserved.
 Use of this source code is governed by a BSD-style
 license that can be found in the LICENSE file.`
 
-const tmplMIT = `Copyright (c){{ if .Year }} {{.Year}}{{ end }} {{.Holder}}
+const tmplMIT = `Copyright (c){{ if .Year }} {{.Year}}{{ end }} Open Text
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -134,7 +130,7 @@ const tmplMPL = `This Source Code Form is subject to the terms of the Mozilla Pu
 License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at https://mozilla.org/MPL/2.0/.`
 
-const tmplSPDX = `{{ if .Holder }}Copyright{{ if .Year }} {{.Year}}{{ end }} {{.Holder}}
+const tmplSPDX = `{{ if .Holder }}Copyright{{ if .Year }} {{.Year}}{{ end }} Open Text
 {{ end }}SPDX-License-Identifier: {{.SPDXID}}`
 
 const spdxSuffix = "\n\nSPDX-License-Identifier: {{.SPDXID}}"
